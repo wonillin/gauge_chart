@@ -22,11 +22,5 @@
 <body>
   <div id="my_dataviz" style="width: 100%; height: 100%; position: fixed"></div>
   <script type="module" src="./Gauge-Chart.js"></script>
-
-  <script type="module">
-    refreshButton.onclick = async () =>
-      await import('./Gauge-Chart.js?timestamp=' + performance.now()).then(fetchDataAndRender());
-  </script>
-
 </body>
 </html>
