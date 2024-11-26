@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="icon" href="data:,">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Circular Barplot</title>
+  <script type="module" src="/tableau.extensions.1.latest.js"></script>
+  <style>
+    body {
+      font-size: 12px;
+      font-family: "Benton Sans", Arial, Helvetica, sans-serif;
+      margin: 0px;
+      width: 100vw;
+      height: 100vh;
+      user-select: none;
+      overflow: hidden;
+    }
+  </style>
+
+</head>
+<body>
+  <div id="my_dataviz" style="width: 100%; height: 100%; position: fixed"></div>
+  <script type="module" src="./circular-barplot-3.js"></script>
+
+  <button id="refreshButton" style="position: fixed; right: 10px; font-size: 12px; font-weight: bold; font-family: inherit; padding: 2px 14px; color: #2E2E2E">Refresh</button>
+  <script type="module">
+    refreshButton.onclick = async () =>
+      await import('./circular-barplot-3.js?timestamp=' + performance.now()).then(fetchDataAndRender());
+  </script>
+
+</body>
+</html>

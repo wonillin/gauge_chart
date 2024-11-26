@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest manifest-version="0.1" xmlns="http://www.tableau.com/xml/extension_manifest">
+  <worksheet-extension id="com.tableau.extension.circular-barplot" extension-version="1.0.0">
+    <default-locale>en_US</default-locale>
+    <name>Gauge Chart</name>
+    <description>Gauge Chart Extension</description>
+    <author name="tableau" email="github@tableau.com" organization="tableau" website="https://www.tableau.com"/>
+    <min-api-version>1.11</min-api-version>
+    <source-location>
+      <url>http://localhost:5173/code/circular-barplot-3.html</url>
+    </source-location>
+    <icon/>
+    
+    <!-- Needle Value 인코딩 추가 -->
+    <encoding id="needleValue">
+      <display-name>Needle Value</display-name>
+      <role-spec>
+        <role-type>continuous-measure</role-type>
+      </role-spec>
+      <fields max-count="1"/>
+      <tooltip>Needle Value</tooltip>
+    </encoding>
+  </worksheet-extension>
+</manifest>
